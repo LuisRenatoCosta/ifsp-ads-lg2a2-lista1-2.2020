@@ -1,0 +1,91 @@
+package lista1exercicio6;
+
+public class Tempo {
+    
+    //Atributos
+    private int hora;
+    private int minuto;
+    private int segundo;
+    private int hora1;
+    private int hora2;
+    private int hora3;
+    private int minuto1;
+    private int minuto2;
+    private int minuto3;
+    private int segundo1;
+    private int segundo2;
+    private int segundo3;
+    private int totalSegundos1;
+    private int totalSegundos2;
+    private int totalSegundos3;
+    
+    //Método Construtor
+    public Tempo() {
+        this.hora = 0;
+        this.minuto = 0;
+        this.segundo = 0;}
+
+    public Tempo(int hora, int minuto, int segundo) {
+        this.hora = hora;
+        this.minuto = minuto;
+        this.segundo = segundo;}   
+    
+    //Getters e Setters
+    public int getHora() {
+        return hora;}
+    public void setHora(int hora) {
+        this.hora = hora;}
+    public int getMinuto() {
+        return minuto;}
+    public void setMinuto(int minuto) {
+        this.minuto = minuto;}
+    public int getSegundo() {
+        return segundo;}
+    public void setSegundo(int segundo) {
+        this.segundo = segundo;}
+    
+    //Métodos complementares
+ 
+    public void mostrar(){
+        System.out.println(hora + ":" + minuto + ":" + segundo);}
+    
+    public void subtrair(Tempo tempo1, Tempo tempo2){
+        hora1 = tempo1.getHora();
+        minuto1 = tempo1.getMinuto();
+        segundo1 = tempo1.getSegundo();
+        
+        hora2 = tempo2.getHora();
+        minuto2 = tempo2.getMinuto();
+        segundo2 = tempo2.getSegundo();
+        
+        totalSegundos1 = hora1*60*60 + minuto1*60 + segundo1;
+        totalSegundos2 = hora2*60*60 + minuto2*60 + segundo2;
+        
+        totalSegundos3 = totalSegundos1 - totalSegundos2;
+        
+        hora3 = totalSegundos3 / (60*60);
+        minuto3 = ((totalSegundos3 - hora3*60*60)) / 60;
+        segundo3 = ((totalSegundos3 - hora3*60*60 - minuto3*60));
+        
+        System.out.println(hora3 + ":" + minuto3 + ":" + segundo3);}
+
+    public void somar(Tempo tempo1, Tempo tempo2){
+        hora1 = tempo1.getHora();
+        minuto1 = tempo1.getMinuto();
+        segundo1 = tempo1.getSegundo();
+        
+        hora2 = tempo2.getHora();
+        minuto2 = tempo2.getMinuto();
+        segundo2 = tempo2.getSegundo();
+        
+        totalSegundos1 = hora1*60*60 + minuto1*60 + segundo1;
+        totalSegundos2 = hora2*60*60 + minuto2*60 + segundo2;
+        
+        totalSegundos3 = totalSegundos1 + totalSegundos2;
+        
+        hora3 = totalSegundos3 / (60*60);
+        minuto3 = ((totalSegundos3 - hora3*60*60)) / 60;
+        segundo3 = ((totalSegundos3 - hora3*60*60 - minuto3*60));
+        
+        System.out.println(hora3 + ":" + minuto3 + ":" + segundo3);}   
+}
