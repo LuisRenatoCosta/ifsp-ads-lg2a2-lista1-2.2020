@@ -1,0 +1,9 @@
+package lista01exercicio01a;
+public class Lista01exercicio01a {
+    public static void main(String[] args) {
+        
+        Pessoa p1 = new Pessoa("Luís", 1996, 1.81f);
+        p1.status();
+    }
+    
+}
