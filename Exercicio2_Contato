@@ -1,0 +1,72 @@
+public class Contato {
+    
+    //Atributos
+    private String nome;
+    private String telefone;
+    private String endereço;
+    private String celular;
+    private boolean ligar;
+    private boolean ligarTelefone;
+    
+    //Método Construtor
+
+    public Contato(String nome, String telefone, String endereço, String celular) {
+        this.nome = nome;
+        this.telefone = telefone;
+        this.endereço = endereço;
+        this.celular = celular;
+        this.ligar = false;
+        this.ligarTelefone = false;}
+    
+    //Getters e Setters
+    public String getNome() {
+        return nome;}
+    public void setNome(String nome) {
+        this.nome = nome;}
+    public String getTelefone() {
+        return telefone;}
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;}
+    public String getEndereço() {
+        return endereço;}
+    public void setEndereço(String endereço) {
+        this.endereço = endereço;}
+    public String getCelular() {
+        return celular;}
+    public void setCelular(String celular) {
+        this.celular = celular;}
+    public boolean getLigar() {
+        return ligar;}
+    public void setLigar(boolean ligar) {
+        this.ligar = ligar;}
+    public boolean getLigarTelefone() {
+        return ligarTelefone;}
+    public void setLigarTelefone(boolean ligarTelefone) {
+        this.ligarTelefone = ligarTelefone;}
+    
+    //Método complementar
+    public void ligarTelefone(){
+        if(this.getLigarTelefone() == true){
+            System.out.println("O telefone já está ligado...");}
+        else {
+            this.setLigarTelefone(true);}}
+    public void desligarTelefone(){
+        if(this.getLigarTelefone() == true){
+            this.setLigarTelefone(false);}
+        else {
+            System.out.println("O telefone já está desligado...");}}
+    public void ligar(){
+        if (this.getLigar() == true){
+            System.out.println("Você já está em uma ligação. Desligue primeiro para realizar outra ligação.");}
+        else {
+            System.out.println("Ligando....");
+            this.setLigar(true);}}
+    public void desligar(){
+        if (this.getLigar() == true){
+            System.out.println("Desligando sua ligação com " + this.getNome());
+            this.setLigar(false);}
+        else {
+            System.out.println("Não há ligação pendente a ser desligada");}}
+    
+    
+}
