@@ -1,0 +1,10 @@
+package lista01exercicio03;
+
+public class Lista01exercicio03 {
+
+    public static void main(String[] args) {
+            
+        Alunos a1 = new Alunos("Luís", 24, 14010470, 5.5f, 8.1f, 9.2f);
+        a1.media();
+        a1.aprovacao();
+}}
