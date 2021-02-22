@@ -1,0 +1,50 @@
+package lista01exercicio04;
+
+public class Pessoa {
+ 
+        private String nome;
+        private int idade;
+        private Object mae;
+        private Object pai;
+        
+        
+        //Métodos getters e setters
+        public String getNome(){
+            return this.nome;}
+        public void setNome(String n){
+            this.nome = n;}
+        public int getIdade(){
+            return this.idade;}
+        public void setIdade(int i){
+            this.idade = i;}
+        public Object getMae(){
+            return this.mae;}
+        public void setMae(Object m){
+            this.mae = m;}
+        public Object getPai(){
+            return this.pai;}
+        public void setPai(Object p){
+            this.pai = p;}
+        
+        //Método construtor
+        public Pessoa(String n, int i, Pessoa m, Pessoa p){
+            this.setNome(n);
+            this.setIdade(i);
+            this.setMae(m);
+            this.setPai(p);} 
+
+        public Pessoa(String n, int i, String m, String p){
+            this.setNome(n);
+            this.setIdade(i);
+            this.setMae(m);
+            this.setPai(p);}
+        
+        //Demais métodos
+        public void dados(){
+            System.out.println("---INFORMAÇÕES DO CLIENTE---");
+            System.out.println("Nome: " + this.getNome());
+            System.out.println("Idade: " + this.getIdade());
+            System.out.println("Mãe: " + this.getMae());
+            System.out.println("Pai: " + this.getPai());}
+
+}
