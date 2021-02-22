@@ -1,0 +1,15 @@
+package lista1exercicio6;
+
+public class Lista1Exercicio6 {
+
+    public static void main(String[] args) {
+        
+        Tempo tempo1 = new Tempo(10, 40, 20);
+        Tempo tempo2 = new Tempo(7, 25, 8);
+        Tempo tempo3 = new Tempo();
+        Tempo tempo4 = new Tempo();
+        
+        tempo3.subtrair(tempo1, tempo2);
+        tempo4.somar(tempo1, tempo2);
+    
+}}
