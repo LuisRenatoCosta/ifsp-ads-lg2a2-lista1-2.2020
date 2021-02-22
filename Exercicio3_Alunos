@@ -1,0 +1,60 @@
+package lista01exercicio03;
+
+public class Alunos {
+
+    private String nome;
+    private int idade;
+    private int matricula;
+    private float nota1;
+    private float nota2;
+    private float trabalho; 
+    private float media;
+    
+    //Getters e Setters
+    public String getNome(){
+        return nome;}
+    public void setNome(String n){
+        this.nome = n;}
+    public int getIdade(){
+        return idade;}
+    public void setIdade(int i){
+        this.idade = i;}
+    public int getMatricula(){
+        return matricula;}
+    public void setMatricula(int m){
+        this.matricula = m;}
+    public float getNota1(){
+        return nota1;}
+    public void setNota1(float n1){
+        this.nota1 = n1;}
+    public float getNota2(){
+        return nota2;}
+    public void setNota2(float n2){
+        this.nota2 = n2;}
+    public float getTrabalho(){
+        return trabalho;}
+    public void setTrabalho(float t){
+        this.trabalho = t;}
+    
+    //Método construtor
+    public Alunos(String n, int i, int m, float n1, float n2, float t){
+        this.setNome(n);
+        this.setIdade(i);
+        this.setMatricula(m);
+        this.setNota1(n1);
+        this.setNota2(n2);
+        this.setTrabalho(t);}
+    
+    //Outros métodos
+    public float media(){
+        return (this.nota1 + this.nota2 + this.trabalho) / 3;}
+    
+    public void aprovacao(){
+        System.out.println("A média do aluno é " + this.media());
+        if (this.media() >= 6){
+            System.out.println("Aprovado");}
+        else if (this.media() < 6 && this.media() > 4){
+            System.out.println("IFA");}
+        else {
+            System.out.println("Reprovado");}}
+}
