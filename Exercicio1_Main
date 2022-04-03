@@ -4,6 +4,7 @@ public class Lista01exercicio01a {
         
         Pessoa p1 = new Pessoa("Luís", 1996, 1.81f);
         p1.status();
+        p2.status();
     }
     
 }
